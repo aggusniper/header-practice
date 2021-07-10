@@ -1,0 +1,42 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    font-size: 20px;
+}
+
+.nav-bar > li + li {
+    margin-left: 20px;
+}
+
+.nav-bar li a {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: var(--color-gray);
+    padding-bottom: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.nav-bar li a::after {
+    position: absolute;
+    content: "";
+    left: 35%;
+    bottom: -8px;
+    width: 30%;
+    height: 3px;
+    background-color: var(--color-gray);
+    transform: scaleX(0);
+    transition: transform 300ms, 
+                width 2000ms 300ms;
+}
+
+.nav-bar li a:hover::after {
+    transform: scaleX(1);
+}
