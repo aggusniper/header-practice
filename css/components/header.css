@@ -4,6 +4,7 @@
     min-height: 100vh;
     color: var(--color-white);
     background-color: var(--color-primary);
+    backface-visibility: hidden;
 }
 
 .header-top {
@@ -33,6 +34,8 @@
     color: var(--color-brown);
     line-height: 1.9;
     position: relative;
+
+    animation: moveIn 2000ms ease-in-out;
 }
 
 .header-bottom__left--title::after {
@@ -43,10 +46,13 @@
     left: 0;
     bottom: 0;
     background-color: var(--color-brown);
+
+    animation: moveIn 2000ms;
 }
 
 .header-bottom__left--short-info {
     font-size: 30px;
+    animation: slide-left 2000ms;
 }
 
 /*******************************
@@ -67,9 +73,10 @@
     width: 80%;
     height: 70%;
     position: absolute;
+    top: 0;
     right: 0;
     background-color: var(--color-brown);
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .profile-picture img {
@@ -77,4 +84,6 @@
     height: auto;
     margin-left: 40%;
     transform: rotate(10deg);
+    transition: transform 2000ms;
+    animation: scale-up 1000ms ease-out;
 }

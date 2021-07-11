@@ -31,7 +31,7 @@
     bottom: -8px;
     width: 30%;
     height: 3px;
-    background-color: var(--color-gray);
+    background-color: var(--color-brown);
     transform: scaleX(0);
     transition: transform 300ms, 
                 width 2000ms 300ms;
